@@ -8,7 +8,7 @@ class Post(models.Model):
 
     title = models.CharField(max_length=130)
     slug = models.SlugField()
-    thumbnail = models.ImageField()
+    thumbnail = models.ImageField(upload_to='blog/photo/')
     short_description= models.TextField()
     description = models.TextField()
     tags = TaggableManager()
